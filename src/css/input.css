@@ -1,3 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins bg-light-background text-dark-gray dark:bg-dark-background  dark:text-light-gray;
+  }
+  .heading-1 {
+    @apply text-6 leading-6 text-black dark:text-white;
+  }
+
+  .heading-2 {
+    @apply text-5 leading-5 text-black dark:text-white;
+  }
+
+  .xl-text {
+    @apply text-4 leading-4 text-black dark:text-white;
+  }
+
+  .lg-text {
+    @apply text-3 leading-3;
+  }
+
+  .md-text {
+    @apply text-2 leading-2;
+  }
+
+  .sm-text {
+    @apply text-1 leading-1 tracking-standard;
+  }
+}
