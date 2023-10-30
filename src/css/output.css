@@ -552,6 +552,38 @@ body{
   }
 }
 
+.arrow-before::before{
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0px;
+  top: 0px;
+  margin: auto;
+  display: block;
+  height: 0.75rem;
+  width: 0.75rem;
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(51 51 51 / var(--tw-border-opacity));
+}
+
+.peer\/faq:checked ~ .arrow-before::before{
+  bottom: 0px;
+  top: 0.5rem;
+  content: var(--tw-content);
+  --tw-rotate: -135deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+:is(.dark .arrow-before)::before{
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -666,8 +698,20 @@ body{
   }
 }
 
+.relative{
+  position: relative;
+}
+
 .mt-lg{
   margin-top: 2.5rem;
+}
+
+.mt-md{
+  margin-top: 1.875rem;
+}
+
+.block{
+  display: block;
 }
 
 .inline-block{
@@ -741,6 +785,10 @@ body{
   padding-bottom: 1.875rem;
 }
 
+.pl-lg{
+  padding-left: 2.5rem;
+}
+
 .pt-sm{
   padding-top: 0.625rem;
 }
@@ -812,6 +860,10 @@ body{
   color: rgb(155 81 224 / var(--tw-text-opacity));
 }
 
+.peer\/faq:checked ~ .peer-checked\/faq\:block{
+  display: block;
+}
+
 .peer\/dark:checked ~ .peer-checked\/dark\:border-accent{
   --tw-border-opacity: 1;
   border-color: rgb(155 81 224 / var(--tw-border-opacity));
@@ -839,11 +891,20 @@ body{
   fill: #BCBCBC;
 }
 
+:is(.dark .dark\:text-white){
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 :is(.dark .hover\:dark\:fill-accent):hover{
   fill: #9B51E0;
 }
 
 @media (min-width: 768px){
+  .md\:mt-lg{
+    margin-top: 2.5rem;
+  }
+
   .md\:block{
     display: block;
   }
