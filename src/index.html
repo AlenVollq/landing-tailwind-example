@@ -6,25 +6,66 @@
     <link href="/src/css/output.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container">
-      <div class="flex items-center justify-end space-x-2">
-        <input type="checkbox" id="themeMode" class="peer/draft hidden" />
-        <span class="text-sm text-gray-800 dark:text-gray-500">Light</span>
-        <label
-          for="themeMode"
-          class="flex h-5 w-5 cursor-pointer items-center rounded-full bg-gray-300 p-1 peer-checked/draft:bg-sky-500"
+    <header>
+      <div
+        class="container flex items-center justify-between gap-md pt-sm md:pt-md"
+      >
+        <a href="/" class="text-active text-3 font-bold leading-1 md:text-4"
+          >LAURA</a
         >
-        </label>
-        <span class="text-sm text-gray-400 dark:text-gray-200">Dark</span>
+        <nav class="hidden md:block">
+          <ul class="sm-text flex items-center gap-md">
+            <li>
+              <a
+                class="text-active border-accent transition-common inline-block border-b-2 font-bold"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:border-accent transition-common inline-block border-b-2 border-transparent"
+                href="#favorite"
+                >Favorite works</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:border-accent transition-common inline-block border-b-2 border-transparent"
+                href="#portfolio"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="sm-text flex items-center gap-md">
+          <input
+            id="lightMode"
+            class="peer/light hidden"
+            type="radio"
+            name="mode"
+            value="light"
+          />
+          <label
+            for="lightMode"
+            class="hover:border-accent transition-common peer-checked/light:text-active peer-checked/light:border-accent cursor-pointer border-b-2 border-transparent peer-checked/light:font-bold"
+            >Light</label
+          >
+          <input
+            id="darkMode"
+            class="peer/dark hidden"
+            type="radio"
+            name="mode"
+            value="dark"
+          />
+          <label
+            for="darkMode"
+            class="hover:border-accent transition-common peer-checked/dark:text-active peer-checked/dark:border-accent cursor-pointer border-b-2 border-transparent peer-checked/dark:font-bold"
+            >Dark</label
+          >
+        </div>
       </div>
-
-      <h1 class="heading-1">Heading-1</h1>
-      <h2 class="heading-2">Heading-2</h2>
-      <p class="xl-text">Text-1</p>
-      <p class="lg-text">Text-2</p>
-      <p class="md-text">Text-3</p>
-      <p class="sm-text">Text-4</p>
-    </div>
+    </header>
 
     <script src="/src/js/script.js"></script>
   </body>

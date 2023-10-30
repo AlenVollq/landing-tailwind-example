@@ -5,18 +5,18 @@
 
 @layer base {
   body {
-    @apply font-poppins bg-light-background text-dark-gray dark:bg-dark-background  dark:text-light-gray;
+    @apply bg-light-background font-poppins text-dark-gray dark:bg-dark-background  dark:text-light-gray;
   }
   .heading-1 {
-    @apply text-6 leading-6 text-black dark:text-white;
+    @apply text-7 font-semibold leading-6 text-black dark:text-white;
   }
 
   .heading-2 {
-    @apply text-5 leading-5 text-black dark:text-white;
+    @apply text-6 font-medium leading-5 text-black dark:text-white;
   }
 
   .xl-text {
-    @apply text-4 leading-4 text-black dark:text-white;
+    @apply text-5 leading-4 text-black dark:text-white;
   }
 
   .lg-text {
@@ -28,6 +28,14 @@
   }
 
   .sm-text {
-    @apply text-1 leading-1 tracking-standard;
+    @apply text-1 font-medium uppercase leading-1 tracking-standard;
+  }
+
+  .text-active {
+    @apply bg-gradient bg-clip-text  text-transparent;
+  }
+
+  .transition-common {
+    @apply transition delay-100 ease-linear;
   }
 }
