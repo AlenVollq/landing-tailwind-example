@@ -46,4 +46,17 @@
   .arrow-before {
     @apply before:absolute before:bottom-2 before:left-0 before:top-0 before:m-auto before:block before:h-3 before:w-3 before:rotate-45 before:border-b-2 before:border-r-2 before:border-dark-gray peer-checked/faq:before:bottom-0 peer-checked/faq:before:top-2 peer-checked/faq:before:-rotate-[135deg] dark:before:border-white;
   }
+
+  .custom-shadow_dark {
+    box-shadow:
+      -3.01333px 3.01333px 3.01333px 0px rgba(255, 255, 255, 0.39) inset,
+      2.01px -2.01px 20px 0px rgba(214, 214, 214, 0.17) inset;
+  }
+
+  .custom-shadow {
+    box-shadow:
+      -3.01333px 3.01333px 3.01333px 0px rgba(255, 255, 255, 0.39) inset,
+      2.01px -2.01px 20px 0px rgba(214, 214, 214, 0.17) inset,
+      0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+  }
 }

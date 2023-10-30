@@ -37,6 +37,7 @@ module.exports = {
         md: "1.875rem", //30px
         lg: "2.5rem", //40px
         xl: "8.75rem", //140px
+        "2xl": "9.375rem", //150px
       },
       lineHeight: {
         1: "1.375rem", //22px
