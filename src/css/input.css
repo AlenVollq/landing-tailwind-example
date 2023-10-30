@@ -8,11 +8,11 @@
     @apply bg-light-background font-poppins text-dark-gray dark:bg-dark-background  dark:text-light-gray;
   }
   .heading-1 {
-    @apply text-7 font-semibold leading-6 text-black dark:text-white;
+    @apply text-5 font-semibold leading-4 text-black dark:text-white md:text-6 md:leading-5 lg:text-7 lg:leading-6;
   }
 
   .heading-2 {
-    @apply text-6 font-medium leading-5 text-black dark:text-white;
+    @apply text-4 font-medium leading-3 text-black dark:text-white md:text-5 md:leading-4 lg:text-6 lg:leading-5;
   }
 
   .xl-text {
@@ -37,5 +37,9 @@
 
   .transition-common {
     @apply transition delay-100 ease-linear;
+  }
+
+  .section-common {
+    @apply my-lg lg:my-xl;
   }
 }

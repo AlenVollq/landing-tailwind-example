@@ -451,17 +451,58 @@ body{
   color: rgb(188 188 188 / var(--tw-text-opacity));
 }
 
-.xl-text{
+.heading-1{
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 3.75rem;
   --tw-text-opacity: 1;
   color: rgb(34 34 34 / var(--tw-text-opacity));
 }
 
-:is(.dark .xl-text){
+:is(.dark .heading-1){
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+  .heading-1{
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .heading-1{
+    font-size: 4.5rem;
+    line-height: 5.125rem;
+  }
+}
+
+.heading-2{
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(34 34 34 / var(--tw-text-opacity));
+}
+
+:is(.dark .heading-2){
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+  .heading-2{
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .heading-2{
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
 }
 
 .lg-text{
@@ -497,6 +538,18 @@ body{
   transition-duration: 150ms;
   transition-delay: 100ms;
   transition-timing-function: linear;
+}
+
+.section-common{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 1024px){
+  .section-common{
+    margin-top: 8.75rem;
+    margin-bottom: 8.75rem;
+  }
 }
 
 *, ::before, ::after{
@@ -613,10 +666,6 @@ body{
   }
 }
 
-.mt-xl{
-  margin-top: 8.75rem;
-}
-
 .mt-lg{
   margin-top: 2.5rem;
 }
@@ -631,14 +680,6 @@ body{
 
 .hidden{
   display: none;
-}
-
-.max-w-sm{
-  max-width: 24rem;
-}
-
-.max-w-md{
-  max-width: 28rem;
 }
 
 .cursor-pointer{
@@ -663,10 +704,6 @@ body{
 
 .gap-sm{
   gap: 0.625rem;
-}
-
-.gap-xl{
-  gap: 8.75rem;
 }
 
 .border-b-2{
@@ -695,26 +732,17 @@ body{
   fill: #333333;
 }
 
-.py-sm{
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-}
-
 .py-md{
   padding-top: 1.875rem;
   padding-bottom: 1.875rem;
-}
-
-.pt-sm{
-  padding-top: 0.625rem;
 }
 
 .pb-md{
   padding-bottom: 1.875rem;
 }
 
-.pb-sm{
-  padding-bottom: 0.625rem;
+.pt-sm{
+  padding-top: 0.625rem;
 }
 
 .text-3{
@@ -744,19 +772,6 @@ body{
 }
 
 @media (min-width: 768px){
-  .md\:xl-text{
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 3.75rem;
-    --tw-text-opacity: 1;
-    color: rgb(34 34 34 / var(--tw-text-opacity));
-  }
-
-  :is(.dark .md\:xl-text){
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
   .md\:lg-text{
     font-size: 1.5rem;
     line-height: 2.25rem;
@@ -828,23 +843,9 @@ body{
   fill: #9B51E0;
 }
 
-@media (min-width: 640px){
-  .sm\:justify-start{
-    justify-content: flex-start;
-  }
-}
-
 @media (min-width: 768px){
-  .md\:mt-xl{
-    margin-top: 8.75rem;
-  }
-
   .md\:block{
     display: block;
-  }
-
-  .md\:max-w-md{
-    max-width: 28rem;
   }
 
   .md\:max-w-sm{
@@ -855,29 +856,12 @@ body{
     flex-direction: row;
   }
 
-  .md\:justify-start{
-    justify-content: flex-start;
-  }
-
   .md\:gap-md{
     gap: 1.875rem;
   }
 
-  .md\:gap-xl{
-    gap: 8.75rem;
-  }
-
-  .md\:py-md{
-    padding-top: 1.875rem;
-    padding-bottom: 1.875rem;
-  }
-
   .md\:pt-md{
     padding-top: 1.875rem;
-  }
-
-  .md\:pb-md{
-    padding-bottom: 1.875rem;
   }
 
   .md\:text-4{
