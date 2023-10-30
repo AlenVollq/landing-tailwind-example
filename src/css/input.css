@@ -16,7 +16,7 @@
   }
 
   .xl-text {
-    @apply text-5 leading-4 text-black dark:text-white;
+    @apply text-5 font-medium leading-4 text-black dark:text-white;
   }
 
   .lg-text {
