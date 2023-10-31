@@ -966,6 +966,10 @@ body{
   height: 3.125rem;
 }
 
+.h-0{
+  height: 0px;
+}
+
 .w-32{
   width: 8rem;
 }
@@ -976,6 +980,10 @@ body{
 
 .w-full{
   width: 100%;
+}
+
+.w-0{
+  width: 0px;
 }
 
 .flex-1{
@@ -1064,6 +1072,10 @@ body{
 
 .rounded-full{
   border-radius: 9999px;
+}
+
+.rounded-sm{
+  border-radius: 0.125rem;
 }
 
 .border-b-2{
@@ -1187,10 +1199,18 @@ body{
   line-height: 1.375rem;
 }
 
+.opacity-0{
+  opacity: 0;
+}
+
 .shadow-\[0px_4px_20px_7px_\#0000000f\]{
   --tw-shadow: 0px 4px 20px 7px #0000000f;
   --tw-shadow-colored: 0px 4px 20px 7px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline{
+  outline-style: solid;
 }
 
 .blur-\[12\.5rem\]{
@@ -1252,6 +1272,31 @@ body{
   }
 }
 
+.focus-within\:border:focus-within{
+  border-width: 1px;
+}
+
+.focus-within\:outline-none:focus-within{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-within\:outline:focus-within{
+  outline-style: solid;
+}
+
+.focus-within\:outline-2:focus-within{
+  outline-width: 2px;
+}
+
+.focus-within\:outline-offset-2:focus-within{
+  outline-offset: 2px;
+}
+
+.focus-within\:-outline-offset-2:focus-within{
+  outline-offset: -2px;
+}
+
 .hover\:border-accent:hover{
   --tw-border-opacity: 1;
   border-color: rgb(155 81 224 / var(--tw-border-opacity));
@@ -1264,6 +1309,10 @@ body{
 .hover\:text-accent:hover{
   --tw-text-opacity: 1;
   color: rgb(155 81 224 / var(--tw-text-opacity));
+}
+
+.focus-visible\:outline:focus-visible{
+  outline-style: solid;
 }
 
 .peer\/faq:checked ~ .peer-checked\/faq\:block{
@@ -1286,6 +1335,22 @@ body{
 
 .peer\/light:checked ~ .peer-checked\/light\:font-bold{
   font-weight: 700;
+}
+
+.peer\/light:focus-within ~ .peer-focus-within\/light\:outline{
+  outline-style: solid;
+}
+
+.peer\/light:focus ~ .peer-focus\/light\:outline{
+  outline-style: solid;
+}
+
+.peer\/light:focus-visible ~ .peer-focus-visible\/light\:outline{
+  outline-style: solid;
+}
+
+.peer\/light:active ~ .peer-active\/light\:outline{
+  outline-style: solid;
 }
 
 :is(.dark .dark\:border-light-gray){

@@ -42,30 +42,38 @@
             </ul>
           </nav>
           <div class="sm-text flex items-center gap-md">
-            <input
-              id="lightMode"
-              class="peer/light hidden"
-              type="radio"
-              name="mode"
-              value="light"
-            />
             <label
               for="lightMode"
-              class="peer-checked/light:text-active cursor-pointer border-b-2 border-transparent transition hover:border-accent peer-checked/light:border-accent peer-checked/light:font-bold"
-              >Light</label
+              class="relative rounded-sm focus-within:outline focus-within:outline-2 focus-within:outline-offset-2"
             >
-            <input
-              id="darkMode"
-              class="peer/dark hidden"
-              type="radio"
-              name="mode"
-              value="dark"
-            />
+              <input
+                id="lightMode"
+                class="peer/light absolute h-0 w-0 opacity-0"
+                type="radio"
+                name="mode"
+                value="light"
+              />
+              <span
+                class="peer-checked/light:text-active cursor-pointer border-b-2 border-transparent transition hover:border-accent peer-checked/light:border-accent peer-checked/light:font-bold"
+                >Light</span
+              >
+            </label>
             <label
               for="darkMode"
-              class="peer-checked/dark:text-active cursor-pointer border-b-2 border-transparent transition hover:border-accent peer-checked/dark:border-accent peer-checked/dark:font-bold"
-              >Dark</label
+              class="relative rounded-sm focus-within:outline focus-within:outline-2 focus-within:outline-offset-2"
             >
+              <input
+                id="darkMode"
+                class="peer/dark absolute h-0 w-0 opacity-0"
+                type="radio"
+                name="mode"
+                value="dark"
+              />
+              <span
+                class="peer-checked/dark:text-active cursor-pointer border-b-2 border-transparent transition hover:border-accent peer-checked/dark:border-accent peer-checked/dark:font-bold"
+                >Dark</span
+              >
+            </label>
           </div>
         </div>
       </header>
