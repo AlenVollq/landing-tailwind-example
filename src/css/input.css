@@ -55,42 +55,8 @@
     @apply sm-text absolute left-0 top-0 flex h-full transform items-center pl-md transition-all group-focus-within/input:h-1/2 group-focus-within/input:-translate-y-full group-focus-within/input:pl-0 peer-valid/input:h-1/2 peer-valid/input:-translate-y-full peer-valid/input:pl-0;
   }
 
-  .shadow-dark {
-    box-shadow:
-      -3.01333px 3.01333px 3.01333px 0px rgba(255, 255, 255, 0.39) inset,
-      2.01px -2.01px 20px 0px rgba(214, 214, 214, 0.17) inset;
-  }
-
-  .shadow-light {
-    box-shadow:
-      -3.01333px 3.01333px 3.01333px 0px rgba(255, 255, 255, 0.39) inset,
-      2.01px -2.01px 20px 0px rgba(214, 214, 214, 0.17) inset,
-      0px 4px 20px 0px rgba(0, 0, 0, 0.1);
-  }
-
-  .shadow-main {
-    box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.06);
-  }
-
-  .border-gradient {
-    padding: 1px;
-    border-radius: 1px;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-  }
-
-  .border-light {
-    background-image: linear-gradient(#f2f2f2, #f2f2f2),
-      linear-gradient(94deg, #9b51e0 2.84%, #3081ed 99.18%);
-  }
-
-  .border-dark {
-    background-image: linear-gradient(#1f1d2b, #1f1d2b),
-      linear-gradient(94deg, #9b51e0 2.84%, #3081ed 99.18%);
-  }
-
   .like-group {
-    @apply group/likes flex cursor-pointer items-center justify-end gap-1 stroke-dark-gray font-medium dark:stroke-light-gray;
+    @apply flex cursor-pointer items-center justify-end gap-1 stroke-dark-gray font-medium dark:stroke-light-gray;
   }
 
   .like-icon {
@@ -102,6 +68,10 @@
   }
 
   .advantages-icon {
-    @apply md:w-2xl md:h-2xl shadow-light dark:shadow-dark flex h-28 w-28 items-center justify-center rounded-3xl bg-white/10 backdrop-blur-2xl;
+    @apply flex h-28 w-28 items-center justify-center rounded-3xl bg-white/10 shadow-[inset_-3.01333px_3.01333px_3.01333px_0px_#ffffff63,inset_2.01px_-2.01px_20px_0px_#d6d6d62b,0px_4px_20px_0px_#0000001a] backdrop-blur-2xl dark:shadow-[inset_-3.01333px_3.01333px_3.01333px_0px_#ffffff63,inset_2.01px_-2.01px_20px_0px_#d6d6d62b] md:h-2xl md:w-2xl;
+  }
+
+  .bg-clip {
+    background-clip: content-box, border-box;
   }
 }

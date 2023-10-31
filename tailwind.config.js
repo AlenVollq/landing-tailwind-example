@@ -31,6 +31,10 @@ module.exports = {
       },
       backgroundImage: {
         gradient: "linear-gradient(94deg, #9B51E0 2.84%, #3081ED 99.18%)",
+        "double-gradient-light":
+          "linear-gradient(#f2f2f2, #f2f2f2), linear-gradient(94deg, #9b51e0 2.84%, #3081ed 99.18%)",
+        "double-gradient-light":
+          "linear-gradient(#1f1d2b, #1f1d2b), linear-gradient(94deg, #9b51e0 2.84%, #3081ed 99.18%)",
       },
       spacing: {
         sm: "0.625rem", //10px

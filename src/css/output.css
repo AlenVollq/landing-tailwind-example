@@ -621,22 +621,6 @@ body{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.shadow-main {
-  box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.06);
-}
-
-.border-gradient {
-  padding: 1px;
-  border-radius: 1px;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-}
-
-.border-light {
-  background-image: linear-gradient(#f2f2f2, #f2f2f2),
-      linear-gradient(94deg, #9b51e0 2.84%, #3081ed 99.18%);
-}
-
 .input{
   font-size: 0.75rem;
   font-weight: 500;
@@ -696,6 +680,34 @@ body{
   padding-left: 0px;
 }
 
+.like-group{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  stroke: #333333;
+  font-weight: 500;
+}
+
+:is(.dark .like-group){
+  stroke: #BCBCBC;
+}
+
+.like-icon{
+  fill: transparent;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.group\/likes:hover .like-icon{
+  fill: #9B51E0;
+  stroke: #9B51E0;
+}
+
 .advantages-block{
   font-size: 1rem;
   line-height: 1.5rem;
@@ -719,11 +731,7 @@ body{
   }
 }
 
-.advantages-icon {
-  box-shadow:
-      -3.01333px 3.01333px 3.01333px 0px rgba(255, 255, 255, 0.39) inset,
-      2.01px -2.01px 20px 0px rgba(214, 214, 214, 0.17) inset,
-      0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+.advantages-icon{
   display: flex;
   height: 7rem;
   width: 7rem;
@@ -731,15 +739,18 @@ body{
   justify-content: center;
   border-radius: 1.5rem;
   background-color: rgb(255 255 255 / 0.1);
+  --tw-shadow: inset -3.01333px 3.01333px 3.01333px 0px #ffffff63,inset 2.01px -2.01px 20px 0px #d6d6d62b,0px 4px 20px 0px #0000001a;
+  --tw-shadow-colored: inset -3.01333px 3.01333px 3.01333px 0px var(--tw-shadow-color), inset 2.01px -2.01px 20px 0px var(--tw-shadow-color), 0px 4px 20px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-backdrop-blur: blur(40px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-:is(.dark .advantages-icon) {
-  box-shadow:
-      -3.01333px 3.01333px 3.01333px 0px rgba(255, 255, 255, 0.39) inset,
-      2.01px -2.01px 20px 0px rgba(214, 214, 214, 0.17) inset;
+:is(.dark .advantages-icon){
+  --tw-shadow: inset -3.01333px 3.01333px 3.01333px 0px #ffffff63,inset 2.01px -2.01px 20px 0px #d6d6d62b;
+  --tw-shadow-colored: inset -3.01333px 3.01333px 3.01333px 0px var(--tw-shadow-color), inset 2.01px -2.01px 20px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 @media (min-width: 768px){
@@ -747,6 +758,10 @@ body{
     height: 9.375rem;
     width: 9.375rem;
   }
+}
+
+.bg-clip {
+  background-clip: content-box, border-box;
 }
 
 *, ::before, ::after{
@@ -995,10 +1010,6 @@ body{
   align-items: center;
 }
 
-.justify-end{
-  justify-content: flex-end;
-}
-
 .justify-between{
   justify-content: space-between;
 }
@@ -1092,20 +1103,20 @@ body{
   background-color: rgb(251 55 255 / var(--tw-bg-opacity));
 }
 
+.bg-double-gradient-light{
+  background-image: linear-gradient(#1f1d2b, #1f1d2b), linear-gradient(94deg, #9b51e0 2.84%, #3081ed 99.18%);
+}
+
 .bg-gradient{
   background-image: linear-gradient(94deg, #9B51E0 2.84%, #3081ED 99.18%);
 }
 
+.bg-origin-border{
+  background-origin: border-box;
+}
+
 .fill-dark-gray{
   fill: #333333;
-}
-
-.fill-transparent{
-  fill: transparent;
-}
-
-.stroke-dark-gray{
-  stroke: #333333;
 }
 
 .object-cover{
@@ -1120,6 +1131,14 @@ body{
 
 .p-\[1\.25rem\]{
   padding: 1.25rem;
+}
+
+.p-\[1px\]{
+  padding: 1px;
+}
+
+.p-\[0\.0625rem\]{
+  padding: 0.0625rem;
 }
 
 .py-md{
@@ -1160,16 +1179,18 @@ body{
   font-weight: 700;
 }
 
-.font-medium{
-  font-weight: 500;
-}
-
 .font-semibold{
   font-weight: 600;
 }
 
 .leading-1{
   line-height: 1.375rem;
+}
+
+.shadow-\[0px_4px_20px_7px_\#0000000f\]{
+  --tw-shadow: 0px 4px 20px 7px #0000000f;
+  --tw-shadow-colored: 0px 4px 20px 7px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .blur-\[12\.5rem\]{
@@ -1202,11 +1223,6 @@ body{
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-}
-
-:is(.dark .dark\:border-dark) {
-  background-image: linear-gradient(#1f1d2b, #1f1d2b),
-      linear-gradient(94deg, #9b51e0 2.84%, #3081ed 99.18%);
 }
 
 @media (min-width: 768px){
@@ -1250,14 +1266,6 @@ body{
   color: rgb(155 81 224 / var(--tw-text-opacity));
 }
 
-.group\/likes:hover .group-hover\/likes\:fill-accent{
-  fill: #9B51E0;
-}
-
-.group\/likes:hover .group-hover\/likes\:stroke-accent{
-  stroke: #9B51E0;
-}
-
 .peer\/faq:checked ~ .peer-checked\/faq\:block{
   display: block;
 }
@@ -1290,12 +1298,12 @@ body{
   background-color: rgb(31 29 43 / var(--tw-bg-opacity));
 }
 
-:is(.dark .dark\:fill-light-gray){
-  fill: #BCBCBC;
+:is(.dark .dark\:bg-double-gradient-light){
+  background-image: linear-gradient(#1f1d2b, #1f1d2b), linear-gradient(94deg, #9b51e0 2.84%, #3081ed 99.18%);
 }
 
-:is(.dark .dark\:stroke-light-gray){
-  stroke: #BCBCBC;
+:is(.dark .dark\:fill-light-gray){
+  fill: #BCBCBC;
 }
 
 :is(.dark .dark\:text-white){

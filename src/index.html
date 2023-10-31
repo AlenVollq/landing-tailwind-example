@@ -1,9 +1,11 @@
 <!doctype html>
-<html class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/src/css/output.css" rel="stylesheet" />
+    <title>TailwindCss Example</title>
+    <meta name="description" content="TailwindCss Example Description" />
   </head>
   <body>
     <div class="overflow-hidden">
@@ -85,7 +87,7 @@
             </a>
           </div>
           <div
-            class="shadow-main border-gradient border-light dark:border-dark relative w-full rounded-[2.1875rem] sm:max-w-[18.75rem] lg:max-w-[31.25rem]"
+            class="bg-clip bg-double-gradient-light dark:bg-double-gradient-light relative w-full rounded-[2.1875rem] bg-origin-border p-[0.0625rem] shadow-[0px_4px_20px_7px_#0000000f] sm:max-w-[18.75rem] lg:max-w-[31.25rem]"
           >
             <span
               class="absolute -left-14 -top-14 h-32 w-32 bg-pink blur-[9.375rem]"
@@ -97,7 +99,7 @@
               class="relative flex flex-col gap-[1.25rem] rounded-[2.1875rem] bg-light-background p-[1.25rem] dark:bg-dark-background lg:gap-md lg:p-md"
             >
               <img
-                class="shadow-main w-full rounded-[1.25rem] object-cover object-center"
+                class="w-full rounded-[1.25rem] object-cover object-center shadow-[0px_4px_20px_7px_#0000000f]"
                 src="/src/img/image-1.jpg"
                 alt="Main image"
               />
@@ -112,7 +114,7 @@
                 </div>
                 <div class="md-text flex flex-col items-end gap-1">
                   <span class="font-semibold">Likes</span>
-                  <div class="like-group">
+                  <div class="like-group group/likes">
                     <svg
                       width="20"
                       height="18"
@@ -409,7 +411,11 @@
             class="flex flex-col items-center justify-between gap-sm border-t border-dark-gray py-md dark:border-light-gray md:flex-row md:gap-md"
           >
             <div class="flex items-center gap-md">
-              <a href="https://www.facebook.com/" target="_blank">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                aria-label="Facebook"
+              >
                 <svg
                   viewBox="0 0 16 32"
                   width="16"
@@ -425,7 +431,11 @@
                   />
                 </svg>
               </a>
-              <a href="https://www.instagram.com/" target="_blank">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                aria-label="Instagram"
+              >
                 <svg
                   width="32"
                   height="32"
@@ -449,7 +459,11 @@
                   />
                 </svg>
               </a>
-              <a href="https://www.youtube.com/" target="_blank">
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                aria-label="Youtube"
+              >
                 <svg
                   width="43"
                   height="32"
