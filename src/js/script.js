@@ -1,32 +1,43 @@
-const theme = document.querySelectorAll("[name=mode]");
+// Theme mode
+const theme = document.querySelector("#themeMode");
 const html = document.querySelector("html");
 
-const toggleDarkMode = function (e) {
-  if (e.target.value === "light") {
-    html.classList.remove("dark");
-    localStorage.theme = "light";
-  } else {
+const toggleDarkMode = () => {
+  if (theme.checked) {
     html.classList.add("dark");
     localStorage.theme = "dark";
+  } else {
+    html.classList.remove("dark");
+    localStorage.theme = "light";
   }
 };
 
-if (theme) {
-  theme.forEach((item) => {
-    item.addEventListener("click", toggleDarkMode);
-  });
-}
+theme.addEventListener("click", toggleDarkMode);
 
-const loadThemeMode = function () {
-  const light = document.querySelector("#lightMode");
-  const dark = document.querySelector("#darkMode");
+const loadThemeMode = () => {
   if (localStorage.theme === "dark") {
     html.classList.add("dark");
-    if (dark) dark.checked = true;
+    theme.checked = true;
   } else {
     html.classList.remove("dark");
-    if (light) light.checked = true;
   }
 };
 
 loadThemeMode();
+
+//Tabs
+const tabs = document.querySelectorAll("[role=tab]");
+
+const toggleActiveTab = (e) => {
+  tabs.forEach((tab) => tab.classList.remove("active-tab"));
+  e.target.classList.add("active-tab");
+};
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", toggleActiveTab);
+});
+
+//Keyboard-navigable
+document.addEventListener("keydown", (event) => {
+  if (event.keyCode == 13) event.target.click();
+});

@@ -4,31 +4,64 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-light-background font-poppins text-dark-gray dark:bg-dark-background  dark:text-light-gray;
+  :root {
+    --font-poppins: "Poppins", "sans-serif";
+
+    --max-width: 81.25rem;
+    --container-padding: 0.625rem;
+
+    /* Colors */
+    --dark: #1f1d2b;
+    --dark-1: #222222;
+    --dark-2: #333333;
+    --light: #f2f2f2;
+    --light-gray: #bcbcbc;
+    --blue: #18b2de;
+    --pink: #fb37ff;
+    --accent: #9b51e0;
+
+    /* Gradients */
+    --gradient: linear-gradient(94deg, #9b51e0 2.84%, #3081ed 99.18%);
+    --gradient-light: linear-gradient(#f2f2f2, #f2f2f2),
+      linear-gradient(94deg, #9b51e0 2.84%, #3081ed 99.18%);
+    --gradient-dark: linear-gradient(#1f1d2b, #1f1d2b),
+      linear-gradient(94deg, #9b51e0 2.84%, #3081ed 99.18%);
   }
+}
+
+@layer components {
+  body {
+    @apply text-dark-gray-2 bg-light-background font-poppins dark:bg-dark-background  dark:text-light-gray;
+  }
+
+  .custom-container {
+    max-width: var(--max-width);
+    padding: 0 var(--container-padding);
+    margin: auto;
+  }
+
   .heading-1 {
-    @apply text-5 font-semibold leading-4 text-black dark:text-white  lg:text-6 lg:leading-5 xl:text-7 xl:leading-6;
+    @apply text-dark-gray-1 text-[2.5rem] font-semibold leading-[3.75rem] dark:text-white  lg:text-5xl lg:leading-[4.5rem] xl:text-7xl xl:leading-[5.125rem];
   }
 
   .heading-2 {
-    @apply text-4 font-medium leading-3 text-black dark:text-white md:text-5 md:leading-4 lg:text-6 lg:leading-5;
+    @apply text-dark-gray-1 text-3xl font-medium leading-9 dark:text-white md:text-[2.5rem] md:leading-[3.75rem] lg:text-5xl lg:leading-[4.5rem];
   }
 
   .xl-text {
-    @apply text-5 font-medium leading-4 text-black dark:text-white;
+    @apply text-dark-gray-1 text-[2.5rem] font-medium leading-[3.75rem] dark:text-white;
   }
 
   .lg-text {
-    @apply text-3 leading-3;
+    @apply text-2xl leading-9;
   }
 
   .md-text {
-    @apply text-2 leading-2;
+    @apply text-base leading-6;
   }
 
   .sm-text {
-    @apply text-1 font-medium uppercase leading-1 tracking-standard;
+    @apply text-xs font-medium uppercase leading-5 tracking-[0.09375em];
   }
 
   .text-active {
@@ -36,39 +69,55 @@
   }
 
   .section {
-    @apply my-16 lg:my-xl;
+    @apply my-16 lg:my-36;
   }
 
   .arrow {
-    @apply before:absolute before:bottom-2 before:left-0 before:top-0 before:m-auto before:block before:h-3 before:w-3 before:rotate-45 before:border-b-2 before:border-r-2 before:border-dark-gray peer-checked/faq:before:bottom-0 peer-checked/faq:before:top-2 peer-checked/faq:before:-rotate-[135deg] dark:before:border-white;
+    @apply before:border-dark-gray-2 before:absolute before:bottom-2 before:left-0 before:top-0 before:m-auto before:block before:h-3 before:w-3 before:rotate-45 before:border-b-2 before:border-r-2 peer-checked:before:bottom-0 peer-checked:before:top-2 peer-checked:before:-rotate-[135deg] dark:before:border-white;
   }
 
   .button {
-    @apply md-text lg:lg-text relative mt-md inline-block items-center justify-center overflow-hidden rounded-2xl px-md py-sm font-medium text-white before:absolute before:left-0 before:top-0 before:h-full before:w-[200%] before:bg-gradient before:transition hover:before:-translate-x-1/3;
+    @apply md-text lg:lg-text relative mt-8 inline-block items-center justify-center overflow-hidden rounded-2xl px-8 py-3 font-medium text-white before:absolute before:left-0 before:top-0 before:h-full before:w-[200%] before:bg-gradient before:transition hover:before:-translate-x-1/3 focus:before:-translate-x-1/3;
+  }
+
+  .button-transparent {
+    @apply sm-text relative m-auto mt-10 block rounded-xl border border-light-gray px-10 py-3 transition hover:border-accent hover:bg-accent hover:text-white focus:border-accent focus:bg-accent focus:text-white;
   }
 
   .input {
-    @apply sm-text  h-11 w-full rounded-[0.625rem] border border-light-gray bg-transparent px-md py-0 text-dark-gray dark:text-white;
+    @apply sm-text  text-dark-gray-2 h-11 w-full rounded-[0.625rem] border border-light-gray bg-transparent px-8 py-0 dark:text-white;
   }
 
   .label {
-    @apply sm-text absolute left-0 top-0 flex h-full transform items-center pl-md transition-all group-focus-within/input:h-1/2 group-focus-within/input:-translate-y-full group-focus-within/input:pl-0 peer-valid/input:h-1/2 peer-valid/input:-translate-y-full peer-valid/input:pl-0;
+    @apply sm-text absolute left-0 top-0 flex h-full transform items-center pl-8 transition-all group-focus-within:h-1/2 group-focus-within:-translate-y-full group-focus-within:pl-0 peer-valid:h-1/2 peer-valid:-translate-y-full peer-valid:pl-0;
   }
 
   .like-group {
-    @apply flex cursor-pointer items-center justify-end gap-1 stroke-dark-gray font-medium dark:stroke-light-gray;
+    @apply stroke-dark-gray-2 flex cursor-pointer items-center justify-end gap-1 font-medium dark:stroke-light-gray;
   }
 
   .like-icon {
-    @apply fill-transparent transition group-hover/likes:fill-accent group-hover/likes:stroke-accent;
+    @apply fill-transparent transition group-hover:fill-accent group-hover:stroke-accent;
   }
 
   .advantages-block {
-    @apply md-text flex w-1/2 flex-col items-center justify-center gap-sm dark:text-white md:w-full md:gap-md;
+    @apply md-text flex w-1/2 flex-col items-center justify-center gap-3 dark:text-white md:w-full md:gap-8;
   }
 
   .advantages-icon {
-    @apply flex h-28 w-28 items-center justify-center rounded-3xl bg-white/10 shadow-[inset_-3.01333px_3.01333px_3.01333px_0px_#ffffff63,inset_2.01px_-2.01px_20px_0px_#d6d6d62b,0px_4px_20px_0px_#0000001a] backdrop-blur-2xl dark:shadow-[inset_-3.01333px_3.01333px_3.01333px_0px_#ffffff63,inset_2.01px_-2.01px_20px_0px_#d6d6d62b] md:h-2xl md:w-2xl;
+    @apply flex h-28 w-28 items-center justify-center rounded-3xl bg-white/10 shadow-[inset_-3.01333px_3.01333px_3.01333px_0px_#ffffff63,inset_2.01px_-2.01px_20px_0px_#d6d6d62b,0px_4px_20px_0px_#0000001a] backdrop-blur-2xl dark:shadow-[inset_-3.01333px_3.01333px_3.01333px_0px_#ffffff63,inset_2.01px_-2.01px_20px_0px_#d6d6d62b] md:h-[9.375rem] md:w-[9.375rem];
+  }
+
+  .item-hover {
+    @apply absolute bottom-0 left-0 right-0 top-0 flex w-full items-center justify-center rounded-xl bg-gray-950/70 opacity-0 transition hover:opacity-100;
+  }
+
+  .item-info {
+    @apply border-dark-gray-2 mt-8 flex items-end justify-between gap-8 border-b pb-3 dark:border-light-gray;
+  }
+
+  .active-tab {
+    @apply text-active border-b-2 border-accent;
   }
 
   .bg-clip {

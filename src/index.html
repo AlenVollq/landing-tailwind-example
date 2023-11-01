@@ -9,15 +9,18 @@
   </head>
   <body>
     <div class="overflow-hidden">
+      <!-- Header -->
       <header>
         <div
-          class="container flex items-center justify-between gap-md pt-sm md:pt-md"
+          class="custom-container flex items-center justify-between gap-8 pt-3 md:pt-8"
         >
-          <a href="/" class="text-active text-3 font-bold leading-1 md:text-4"
+          <a
+            href="/"
+            class="text-active text-2xl font-bold leading-5 md:text-3xl"
             >LAURA</a
           >
           <nav class="hidden md:block">
-            <ul class="sm-text flex items-center gap-md">
+            <ul class="sm-text flex items-center gap-8">
               <li>
                 <a
                   class="text-active inline-block border-b-2 border-accent font-bold transition"
@@ -27,64 +30,46 @@
               </li>
               <li>
                 <a
-                  class="inline-block border-b-2 border-transparent transition hover:border-accent"
+                  class="inline-block border-b-2 border-transparent transition hover:border-accent focus:border-accent"
                   href="#favorite"
                   >Favorite works</a
                 >
               </li>
               <li>
                 <a
-                  class="inline-block border-b-2 border-transparent transition hover:border-accent"
+                  class="inline-block border-b-2 border-transparent transition hover:border-accent focus:border-accent"
                   href="#portfolio"
                   >Portfolio</a
                 >
               </li>
             </ul>
           </nav>
-          <div class="sm-text flex items-center gap-md">
-            <label
-              for="lightMode"
-              class="relative rounded-sm focus-within:outline focus-within:outline-2 focus-within:outline-offset-2"
+          <input id="themeMode" class="hidden" type="checkbox" />
+          <label
+            tabindex="0"
+            for="themeMode"
+            class="sm-text flex items-center gap-8"
+          >
+            <span
+              class="text-active relative cursor-pointer border-b-2 border-accent font-bold transition hover:border-accent focus:border-accent dark:border-transparent dark:font-medium dark:text-light-gray"
+              >Light</span
             >
-              <input
-                id="lightMode"
-                class="peer/light absolute h-0 w-0 opacity-0"
-                type="radio"
-                name="mode"
-                value="light"
-              />
-              <span
-                class="peer-checked/light:text-active cursor-pointer border-b-2 border-transparent transition hover:border-accent peer-checked/light:border-accent peer-checked/light:font-bold"
-                >Light</span
-              >
-            </label>
-            <label
-              for="darkMode"
-              class="relative rounded-sm focus-within:outline focus-within:outline-2 focus-within:outline-offset-2"
+            <span
+              class="dark:text-active relative cursor-pointer border-b-2 border-transparent font-medium transition hover:border-accent focus:border-accent dark:border-accent dark:font-bold"
+              >Dark</span
             >
-              <input
-                id="darkMode"
-                class="peer/dark absolute h-0 w-0 opacity-0"
-                type="radio"
-                name="mode"
-                value="dark"
-              />
-              <span
-                class="peer-checked/dark:text-active cursor-pointer border-b-2 border-transparent transition hover:border-accent peer-checked/dark:border-accent peer-checked/dark:font-bold"
-                >Dark</span
-              >
-            </label>
-          </div>
+          </label>
         </div>
       </header>
 
+      <!-- Main -->
       <section class="section" id="home">
         <div
-          class="container flex flex-col items-center gap-md sm:flex-row xl:gap-xl"
+          class="custom-container flex flex-col items-center gap-8 sm:flex-row xl:gap-36"
         >
           <div class="flex-1">
             <h1 class="heading-1">We will create a photo story with you</h1>
-            <p class="md-text lg:lg-text mt-md">
+            <p class="md-text lg:lg-text mt-8">
               Our life consists of vivid memories that we, like pearls in the
               palm of our hand, sort through over time. I believe in the smell
               of photographs, in the sounds and dreams they hold. I invite you
@@ -95,7 +80,7 @@
             </a>
           </div>
           <div
-            class="bg-clip bg-double-gradient-light dark:bg-double-gradient-light relative w-full rounded-[2.1875rem] bg-origin-border p-[0.0625rem] shadow-[0px_4px_20px_7px_#0000000f] sm:max-w-[18.75rem] lg:max-w-[31.25rem]"
+            class="bg-clip relative w-full rounded-[2.1875rem] bg-double-gradient-light bg-origin-border p-[0.0625rem] shadow-[0px_4px_20px_7px_#0000000f] dark:bg-double-gradient-dark sm:max-w-[18.75rem] lg:max-w-[31.25rem]"
           >
             <span
               class="absolute -left-14 -top-14 h-32 w-32 bg-pink blur-[9.375rem]"
@@ -104,25 +89,27 @@
               class="absolute -bottom-14 -right-14 h-32 w-32 bg-blue blur-[9.375rem]"
             ></span>
             <div
-              class="relative flex flex-col gap-[1.25rem] rounded-[2.1875rem] bg-light-background p-[1.25rem] dark:bg-dark-background lg:gap-md lg:p-md"
+              class="relative space-y-5 rounded-[2.1875rem] bg-light-background p-5 dark:bg-dark-background lg:space-y-8 lg:p-8"
             >
               <img
-                class="w-full rounded-[1.25rem] object-cover object-center shadow-[0px_4px_20px_7px_#0000000f]"
+                class="w-full rounded-3xl object-cover object-center shadow-[0px_4px_20px_7px_#0000000f]"
                 src="/src/img/image-1.jpg"
+                width="27.5rem"
+                height="27.5rem"
                 alt="Main image"
               />
               <div class="flex items-center justify-between">
                 <div class="md-text flex items-center gap-5 font-semibold">
                   <img
-                    class="h-[3.125rem] w-[3.125rem] rounded-full object-cover object-center"
+                    class="h-12 w-12 rounded-full object-cover object-center"
                     src="/src/img/user.jpg"
                     alt="Laura icon"
                   />
                   <p>Laura</p>
                 </div>
-                <div class="md-text flex flex-col items-end gap-1">
-                  <span class="font-semibold">Likes</span>
-                  <div class="like-group group/likes">
+                <div class="md-text space-y-1">
+                  <span class="block text-right font-semibold">Likes</span>
+                  <div class="like-group group" tabindex="0">
                     <svg
                       width="20"
                       height="18"
@@ -147,31 +134,287 @@
         </div>
       </section>
 
+      <!-- Favorite -->
       <section class="section" id="favorite">
-        <div class="container">
-          <h2 class="heading-2">Favorite works</h2>
+        <div class="custom-container">
+          <div
+            class="flex flex-col items-center justify-between gap-8 md:flex-row"
+          >
+            <h2 class="heading-2">Favorite works</h2>
+            <a
+              href="/"
+              class="md-text md:lg-text group flex items-center gap-1 font-semibold hover:text-accent focus:text-accent"
+            >
+              View all
+              <svg
+                width="24"
+                height="26"
+                viewBox="0 0 24 26"
+                fill="none"
+                class="fill-dark-gray-2 group-hover:fill-accent group-focus:fill-accent dark:fill-light-gray"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.2197 20.3363C13.5126 20.6493 13.9874 20.6493 14.2803 20.3363L20.5303 13.6574C20.8232 13.3444 20.8232 12.8369 20.5303 12.5239L14.2803 5.84497C13.9874 5.53198 13.5126 5.53198 13.2197 5.84497C12.9268 6.15797 12.9268 6.66543 13.2197 6.97843L18.1893 12.2892L3.75 12.2892C3.33579 12.2892 3 12.648 3 13.0906C3 13.5333 3.33579 13.8921 3.75 13.8921L18.1893 13.8921L13.2197 19.2028C12.9268 19.5158 12.9268 20.0233 13.2197 20.3363Z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            <!-- Item -->
+            <article class="flex flex-col justify-between">
+              <a
+                href="/src/img/image-2.jpg"
+                target="_blank"
+                class="relative block h-72"
+              >
+                <span class="item-hover">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <img
+                  class="h-full w-full rounded-xl object-cover object-center"
+                  src="/src/img/image-2.jpg"
+                  width="18.625rem"
+                  height="18.625rem"
+                  loading="lazy"
+                  alt="Favorite works image 1"
+                />
+              </a>
+              <div class="item-info">
+                <h3 class="md-text font-semibold">Sunset</h3>
+                <div class="like-group group" tabindex="0">
+                  <svg
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    class="like-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  25
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="flex flex-col justify-between">
+              <a
+                href="/src/img/image-3.jpg"
+                target="_blank"
+                class="relative block h-72"
+              >
+                <span class="item-hover">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <img
+                  class="h-full w-full rounded-xl object-cover object-center"
+                  src="/src/img/image-3.jpg"
+                  width="18.625rem"
+                  height="18.625rem"
+                  loading="lazy"
+                  alt="Favorite works image 2"
+                />
+              </a>
+              <div class="item-info">
+                <h3 class="md-text font-semibold">
+                  Abstract painting on canvas
+                </h3>
+                <div class="like-group group" tabindex="0">
+                  <svg
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    class="like-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  19
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="flex flex-col justify-between">
+              <a
+                href="/src/img/image-4.jpg"
+                target="_blank"
+                class="relative block h-72"
+              >
+                <span class="item-hover">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <img
+                  class="h-full w-full rounded-xl object-cover object-center"
+                  src="/src/img/image-4.jpg"
+                  width="18.625rem"
+                  height="18.625rem"
+                  loading="lazy"
+                  alt="Favorite works image 3"
+                />
+              </a>
+              <div class="item-info">
+                <h3 class="md-text font-semibold">Abstraction</h3>
+                <div class="like-group group" tabindex="0">
+                  <svg
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    class="like-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  105
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="flex flex-col justify-between">
+              <a
+                href="/src/img/image-5.jpg"
+                target="_blank"
+                class="relative block h-72"
+              >
+                <span class="item-hover">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <img
+                  class="h-full w-full rounded-xl object-cover object-center"
+                  src="/src/img/image-5.jpg"
+                  width="18.625rem"
+                  height="18.625rem"
+                  loading="lazy"
+                  alt="Favorite works image 4"
+                />
+              </a>
+              <div class="item-info">
+                <h3 class="md-text font-semibold">Black hole</h3>
+                <div class="like-group group" tabindex="0">
+                  <svg
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    class="like-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  20
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
+      <!-- Advantages -->
       <section class="section relative">
         <span
           class="absolute bottom-0 top-0 m-auto h-14 w-full bg-gradient blur-[12.5rem] dark:blur-[9.375rem]"
         ></span>
-        <div class="container">
+        <div class="custom-container">
           <h2 class="heading-2 text-center">Let's create history</h2>
-          <p class="md-text md:lg-text mt-md text-center">
+          <p class="md-text md:lg-text mt-8 text-center">
             Save not only the moment, the place, but also the aroma and
             sensations.
           </p>
           <div
-            class="mt-md flex flex-wrap items-start justify-around gap-y-md text-center md:mt-lg md:flex-nowrap md:gap-md"
+            class="mt-8 flex flex-wrap items-start justify-around gap-y-8 text-center md:mt-11 md:flex-nowrap md:gap-8"
           >
+            <!-- Advantages item -->
             <div class="advantages-block">
               <div class="advantages-icon">
                 <svg
                   width="56"
                   height="60"
-                  class="fill-dark-gray dark:fill-light-gray"
+                  class="fill-dark-gray-2 dark:fill-light-gray"
                   viewBox="0 0 56 60"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -188,12 +431,14 @@
               </div>
               <p>Get high-quality photos</p>
             </div>
+
+            <!-- Advantages item -->
             <div class="advantages-block">
               <div class="advantages-icon">
                 <svg
                   width="56"
                   height="60"
-                  class="fill-dark-gray dark:fill-light-gray"
+                  class="fill-dark-gray-2 dark:fill-light-gray"
                   viewBox="0 0 56 60"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -213,12 +458,14 @@
               </div>
               <p>All sources will be archived</p>
             </div>
+
+            <!-- Advantages item -->
             <div class="advantages-block">
               <div class="advantages-icon">
                 <svg
                   width="56"
                   height="60"
-                  class="fill-dark-gray dark:fill-light-gray"
+                  class="fill-dark-gray-2 dark:fill-light-gray"
                   viewBox="0 0 56 60"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -232,12 +479,14 @@
               </div>
               <p>Minimum 30 edited photos</p>
             </div>
+
+            <!-- Advantages item -->
             <div class="advantages-block">
               <div class="advantages-icon">
                 <svg
                   width="56"
                   height="60"
-                  class="fill-dark-gray dark:fill-light-gray"
+                  class="fill-dark-gray-2 dark:fill-light-gray"
                   viewBox="0 0 56 60"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -255,26 +504,1031 @@
         </div>
       </section>
 
+      <!-- Portfolio -->
       <section class="section" id="portfolio">
-        <div class="container">
-          <h2 class="heading-2">Portfolio</h2>
+        <div class="custom-container relative">
+          <span
+            class="absolute -right-14 -top-14 h-32 w-32 bg-pink blur-[9.375rem]"
+          ></span>
+          <span
+            class="absolute -bottom-14 -left-14 h-32 w-32 bg-blue blur-[9.375rem]"
+          ></span>
+          <div
+            class="relative flex flex-col items-center justify-between gap-8 md:flex-row"
+          >
+            <h2 class="heading-2">Portfolio</h2>
+            <div
+              role="tablist"
+              class="flex flex-wrap justify-center gap-x-8 gap-y-3"
+            >
+              <!-- Tab -->
+              <label
+                for="tab1"
+                class="md-text md:lg-text cursor-pointer font-medium hover:text-accent focus:text-accent"
+                ><span
+                  tabindex="0"
+                  class="active-tab"
+                  aria-controls="panel1"
+                  role="tab"
+                  id="tabpanel1"
+                  >All</span
+                ></label
+              >
+
+              <!-- Tab -->
+              <label
+                for="tab2"
+                class="md-text md:lg-text cursor-pointer font-medium hover:text-accent focus:text-accent"
+                ><span
+                  tabindex="0"
+                  aria-controls="panel2"
+                  role="tab"
+                  id="tabpanel2"
+                  >Abstraction</span
+                ></label
+              >
+
+              <!-- Tab -->
+              <label
+                for="tab3"
+                class="md-text md:lg-text cursor-pointer font-medium hover:text-accent focus:text-accent"
+                ><span
+                  tabindex="0"
+                  aria-controls="panel3"
+                  role="tab"
+                  id="tabpanel3"
+                  >Nature</span
+                ></label
+              >
+            </div>
+          </div>
+
+          <!-- Tab content -->
+          <div class="relative">
+            <input
+              class="peer hidden"
+              type="radio"
+              id="tab1"
+              name="tabs"
+              checked
+            />
+            <div
+              class="mt-8 hidden grid-cols-1 gap-8 peer-checked:grid sm:grid-cols-2 lg:grid-cols-4"
+              role="tabpanel"
+              aria-labelledby="tabpanel1"
+              id="panel1"
+            >
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-6.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-6.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 5"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Sunset</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    25
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-7.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-7.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 6"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">
+                    Abstract painting on canvas
+                  </h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    19
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-8.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-8.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 7"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Abstraction</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    105
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-9.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-9.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 8"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Black hole</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    20
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-10.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-10.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 9"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Sunset</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    25
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-11.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-11.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 10"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Abstraction</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    19
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-12.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-12.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 11"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">
+                    Abstract painting on canvas
+                  </h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    105
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-13.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-13.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 12"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Black hole</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    20
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Tab content -->
+          <div class="relative">
+            <input class="peer hidden" type="radio" id="tab2" name="tabs" />
+            <div
+              class="mt-8 hidden grid-cols-1 gap-8 peer-checked:grid sm:grid-cols-2 lg:grid-cols-4"
+              role="tabpanel"
+              aria-labelledby="tabpanel2"
+              id="panel2"
+            >
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-6.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-6.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 5"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Sunset</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    25
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-7.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-7.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 6"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">
+                    Abstract painting on canvas
+                  </h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    19
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-8.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-8.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 7"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Abstraction</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    105
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-9.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-9.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 8"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Black hole</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    20
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Tab content -->
+          <div class="relative">
+            <input class="peer hidden" type="radio" id="tab3" name="tabs" />
+            <div
+              class="mt-8 hidden grid-cols-1 gap-8 peer-checked:grid sm:grid-cols-2 lg:grid-cols-4"
+              role="tabpanel"
+              aria-labelledby="tabpanel3"
+              id="panel3"
+            >
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-10.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-10.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 9"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Sunset</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    25
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-11.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-11.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 10"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Abstraction</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    19
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-12.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-12.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 11"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">
+                    Abstract painting on canvas
+                  </h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    105
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image-13.jpg"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image-13.jpg"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 12"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Black hole</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    20
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <button type="button" class="button-transparent">Load more</button>
         </div>
       </section>
 
+      <!-- FAQ -->
       <section class="section relative">
         <span
           class="absolute bottom-0 top-0 m-auto h-14 w-full bg-gradient blur-[12.5rem] dark:blur-[9.375rem]"
         ></span>
-        <div class="container">
-          <h2 class="heading-2">FAQ</h2>
-          <label class="md:lg-text mt-md block cursor-pointer text-xl md:mt-lg">
-            <input type="checkbox" class="peer/faq hidden" />
-            <p class="arrow relative pl-lg dark:text-white">
+        <div class="custom-container">
+          <h2 class="heading-2 text-center md:text-left">FAQ</h2>
+          <!-- FAQ item -->
+          <label
+            tabindex="0"
+            class="md:lg-text mt-8 block cursor-pointer text-xl"
+          >
+            <input type="checkbox" class="peer hidden" />
+            <p class="arrow relative pl-11 dark:text-white">
               This is our first time at a photo shoot. Can you tell me how to
               pose, where to look?
             </p>
             <span
-              class="md-text md:lg-text hidden pt-sm peer-checked/faq:block md:pt-md"
+              class="md-text md:lg-text hidden pt-3 peer-checked:block md:pt-8"
             >
               <p>
                 Yes, of course, I always help with posing and suggest how best
@@ -284,13 +1538,18 @@
               </p>
             </span>
           </label>
-          <label class="md:lg-text mt-md block cursor-pointer text-xl md:mt-lg">
-            <input type="checkbox" class="peer/faq hidden" />
-            <p class="arrow relative pl-lg dark:text-white">
+
+          <!-- FAQ item -->
+          <label
+            tabindex="0"
+            class="md:lg-text mt-8 block cursor-pointer text-xl md:mt-11"
+          >
+            <input type="checkbox" class="peer hidden" />
+            <p class="arrow relative pl-11 dark:text-white">
               How long in advance do I need to sign up for a shoot?
             </p>
             <span
-              class="md-text md:lg-text hidden pt-sm peer-checked/faq:block md:pt-md"
+              class="md-text md:lg-text hidden pt-3 peer-checked:block md:pt-8"
             >
               <p>
                 The earlier you sign up, the more likely it is that the time you
@@ -299,13 +1558,18 @@
               </p>
             </span>
           </label>
-          <label class="md:lg-text mt-md block cursor-pointer text-xl md:mt-lg">
-            <input type="checkbox" class="peer/faq hidden" />
-            <p class="arrow relative pl-lg dark:text-white">
+
+          <!-- FAQ item -->
+          <label
+            tabindex="0"
+            class="md:lg-text md:mt-11- mt-8 block cursor-pointer text-xl"
+          >
+            <input type="checkbox" class="peer hidden" />
+            <p class="arrow relative pl-11 dark:text-white">
               Do you print photos?
             </p>
             <span
-              class="md-text md:lg-text hidden pt-sm peer-checked/faq:block md:pt-md"
+              class="md-text md:lg-text hidden pt-3 peer-checked:block md:pt-8"
             >
               <p>
                 Yes, but photo printing is not included in the cost of photo
@@ -324,65 +1588,64 @@
         </div>
       </section>
 
+      <!-- Contact me -->
       <section class="section" id="contact">
-        <div class="container">
-          <h2 class="heading-2">Contact me</h2>
-          <form class="mt-md grid gap-md md:mt-lg md:grid-cols-3">
-            <div class="group/input relative">
-              <input
-                id="username"
-                class="input peer/input"
-                type="text"
-                required
-              />
+        <div class="custom-container">
+          <h2 class="heading-2 text-center md:text-left">Contact me</h2>
+          <form class="mt-8 grid gap-8 md:mt-11 md:grid-cols-3">
+            <div class="group relative">
+              <input id="username" class="input peer" type="text" required />
               <label for="username" class="label">Name</label>
             </div>
-            <div class="group/input relative">
-              <input id="phone" class="input peer/input" type="text" required />
+            <div class="group relative">
+              <input id="phone" class="input peer" type="text" required />
               <label for="phone" class="label">Phone</label>
             </div>
             <button class="button mt-0 flex h-11 rounded-[0.625rem]">
-              <span class="relative text-2">Contact</span>
+              <span class="relative text-base">Contact</span>
             </button>
           </form>
         </div>
       </section>
 
-      <footer class="mt-lg lg:mt-xl">
-        <div class="container">
-          <div class="flex flex-col justify-between gap-md pb-md md:flex-row">
-            <p class="lg-text lg:xl-text md:max-w-sm lg:max-w-md">
+      <!-- Footer -->
+      <footer class="mt-11 lg:mt-36">
+        <div class="custom-container">
+          <div class="flex flex-col justify-between gap-8 pb-8 md:flex-row">
+            <p
+              class="lg-text lg:xl-text text-center md:max-w-sm md:text-left lg:max-w-lg"
+            >
               For me, photography is not just beautiful shots, it is an
               opportunity to show your beauty and individuality.
             </p>
-            <nav class="flex gap-md lg:gap-xl">
-              <ul class="flex flex-col gap-sm md:gap-md">
+            <nav class="flex justify-center gap-8 md:justify-start lg:gap-36">
+              <ul class="space-y-3 text-center md:space-y-8 md:text-left">
                 <li>
                   <a
-                    class="md-text lg:lg-text transition hover:text-accent"
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
                     href="#home"
                     >Home</a
                   >
                 </li>
                 <li>
                   <a
-                    class="md-text lg:lg-text transition hover:text-accent"
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
                     href="#favorite"
                     >Favorite works</a
                   >
                 </li>
                 <li>
                   <a
-                    class="md-text lg:lg-text transition hover:text-accent"
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
                     href="#portfolio"
                     >Portfolio</a
                   >
                 </li>
               </ul>
-              <ul class="flex flex-col gap-sm md:gap-md">
+              <ul class="space-y-3 text-center md:space-y-8 md:text-left">
                 <li>
                   <a
-                    class="md-text lg:lg-text transition hover:text-accent"
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
                     href="https://www.facebook.com/"
                     target="_blank"
                     >Facebook</a
@@ -390,7 +1653,7 @@
                 </li>
                 <li>
                   <a
-                    class="md-text lg:lg-text transition hover:text-accent"
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
                     href="https://www.instagram.com/"
                     target="_blank"
                     >Instagram</a
@@ -398,7 +1661,7 @@
                 </li>
                 <li>
                   <a
-                    class="md-text lg:lg-text transition hover:text-accent"
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
                     href="https://www.youtube.com/"
                     target="_blank"
                     >YouTube</a
@@ -406,7 +1669,7 @@
                 </li>
                 <li>
                   <a
-                    class="md-text lg:lg-text transition hover:text-accent"
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
                     href="mailto:example@gmail.com"
                     target="_blank"
                     >Email</a
@@ -416,9 +1679,9 @@
             </nav>
           </div>
           <div
-            class="flex flex-col items-center justify-between gap-sm border-t border-dark-gray py-md dark:border-light-gray md:flex-row md:gap-md"
+            class="border-dark-gray-2 flex flex-col items-center justify-between gap-3 border-t py-8 dark:border-light-gray md:flex-row md:gap-8"
           >
-            <div class="flex items-center gap-md">
+            <div class="flex items-center gap-8">
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
@@ -430,7 +1693,7 @@
                   height="32"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="fill-dark-gray transition hover:fill-accent dark:fill-light-gray hover:dark:fill-accent"
+                  class="fill-dark-gray-2 transition hover:fill-accent dark:fill-light-gray hover:dark:fill-accent"
                 >
                   <path
                     fill-rule="evenodd"
@@ -450,7 +1713,7 @@
                   viewBox="0 0 32 32"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="fill-dark-gray transition hover:fill-accent dark:fill-light-gray hover:dark:fill-accent"
+                  class="fill-dark-gray-2 transition hover:fill-accent dark:fill-light-gray hover:dark:fill-accent"
                 >
                   <path
                     fill-rule="evenodd"
@@ -478,7 +1741,7 @@
                   viewBox="0 0 43 32"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="fill-dark-gray transition hover:fill-accent dark:fill-light-gray hover:dark:fill-accent"
+                  class="fill-dark-gray-2 transition hover:fill-accent dark:fill-light-gray hover:dark:fill-accent"
                 >
                   <path
                     fill-rule="evenodd"
@@ -501,3 +1764,10 @@
     <script src="/src/js/script.js"></script>
   </body>
 </html>
+
+<!-- 
+Минимизировать
+Выложить на гит пэйджес
+Проверить на мобе
+Пересмотреть колонки
+-->
