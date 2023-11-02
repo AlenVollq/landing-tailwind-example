@@ -1,10 +1,13 @@
 {
-	"devDependencies": {
-		"prettier": "^3.0.3",
-		"prettier-plugin-tailwindcss": "^0.5.6",
-		"tailwindcss": "^3.3.5"
-	},
-	"scripts": {
-		"dev": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
-	}
+  "homepage": "https://AlenVollq.github.io/landing-tailwind-example",
+  "devDependencies": {
+    "gh-pages": "^6.0.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "tailwindcss": "^3.3.5"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch",
+    "deploy": "gh-pages -d build"
+  }
 }
