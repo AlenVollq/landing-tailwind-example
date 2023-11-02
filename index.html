@@ -1,0 +1,1767 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/css/output.css" rel="stylesheet" />
+    <title>TailwindCss Example</title>
+    <meta name="description" content="TailwindCss Example Description" />
+    <link rel="preload" as="image" href="/src/img/image1.webp" />
+  </head>
+  <body>
+    <div class="overflow-hidden">
+      <!-- Header -->
+      <header>
+        <div
+          class="custom-container flex items-center justify-between gap-8 pt-3 md:pt-8"
+        >
+          <a
+            href="/"
+            class="text-active text-2xl font-bold leading-5 md:text-3xl"
+            >LAURA</a
+          >
+          <nav class="hidden md:block">
+            <ul class="sm-text flex items-center gap-8">
+              <li>
+                <a
+                  class="text-active inline-block border-b-2 border-accent font-bold transition"
+                  href="#home"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="inline-block border-b-2 border-transparent transition hover:border-accent focus:border-accent"
+                  href="#favorite"
+                  >Favorite works</a
+                >
+              </li>
+              <li>
+                <a
+                  class="inline-block border-b-2 border-transparent transition hover:border-accent focus:border-accent"
+                  href="#portfolio"
+                  >Portfolio</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <input id="themeMode" class="hidden" type="checkbox" />
+          <label
+            tabindex="0"
+            for="themeMode"
+            class="sm-text flex items-center gap-8"
+          >
+            <span
+              class="text-active relative cursor-pointer border-b-2 border-accent font-bold transition hover:border-accent focus:border-accent dark:border-transparent dark:font-medium dark:text-light-gray"
+              >Light</span
+            >
+            <span
+              class="dark:text-active relative cursor-pointer border-b-2 border-transparent font-medium transition hover:border-accent focus:border-accent dark:border-accent dark:font-bold"
+              >Dark</span
+            >
+          </label>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <section class="section" id="home">
+        <div
+          class="custom-container flex flex-col items-center gap-8 sm:flex-row xl:gap-36"
+        >
+          <div class="flex-1">
+            <h1 class="heading-1">We will create a photo story with you</h1>
+            <p class="md-text lg:lg-text mt-8">
+              Our life consists of vivid memories that we, like pearls in the
+              palm of our hand, sort through over time. I believe in the smell
+              of photographs, in the sounds and dreams they hold. I invite you
+              to plunge into the magical world of photography.
+            </p>
+            <a class="button" href="#contact">
+              <span class="relative">Contact us</span>
+            </a>
+          </div>
+          <div
+            class="bg-clip relative w-full rounded-[2.1875rem] bg-double-gradient-light bg-origin-border p-[0.0625rem] shadow-[0px_4px_20px_7px_#0000000f] dark:bg-double-gradient-dark sm:max-w-[18.75rem] lg:max-w-[31.25rem]"
+          >
+            <span
+              class="absolute -left-14 -top-14 h-32 w-32 bg-pink blur-[9.375rem]"
+            ></span>
+            <span
+              class="absolute -bottom-14 -right-14 h-32 w-32 bg-blue blur-[9.375rem]"
+            ></span>
+            <div
+              class="relative space-y-5 rounded-[2.1875rem] bg-light-background p-5 dark:bg-dark-background lg:space-y-8 lg:p-8"
+            >
+              <img
+                class="w-full rounded-3xl object-cover object-center shadow-[0px_4px_20px_7px_#0000000f]"
+                src="/src/img/image1.webp"
+                width="27.5rem"
+                height="27.5rem"
+                alt="Main image"
+              />
+              <div class="flex items-center justify-between">
+                <div class="md-text flex items-center gap-5 font-semibold">
+                  <img
+                    class="h-12 w-12 rounded-full object-cover object-center"
+                    src="/src/img/user.webp"
+                    alt="Laura icon"
+                  />
+                  <p>Laura</p>
+                </div>
+                <div class="md-text space-y-1">
+                  <span class="block text-right font-semibold">Likes</span>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    25
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Favorite -->
+      <section class="section" id="favorite">
+        <div class="custom-container">
+          <div
+            class="flex flex-col items-center justify-between gap-8 md:flex-row"
+          >
+            <h2 class="heading-2">Favorite works</h2>
+            <a
+              href="/"
+              class="md-text md:lg-text group flex items-center gap-1 font-semibold hover:text-accent focus:text-accent"
+            >
+              View all
+              <svg
+                width="24"
+                height="26"
+                viewBox="0 0 24 26"
+                fill="none"
+                class="fill-dark-gray-2 group-hover:fill-accent group-focus:fill-accent dark:fill-light-gray"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.2197 20.3363C13.5126 20.6493 13.9874 20.6493 14.2803 20.3363L20.5303 13.6574C20.8232 13.3444 20.8232 12.8369 20.5303 12.5239L14.2803 5.84497C13.9874 5.53198 13.5126 5.53198 13.2197 5.84497C12.9268 6.15797 12.9268 6.66543 13.2197 6.97843L18.1893 12.2892L3.75 12.2892C3.33579 12.2892 3 12.648 3 13.0906C3 13.5333 3.33579 13.8921 3.75 13.8921L18.1893 13.8921L13.2197 19.2028C12.9268 19.5158 12.9268 20.0233 13.2197 20.3363Z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            <!-- Item -->
+            <article class="flex flex-col justify-between">
+              <a
+                href="/src/img/image2.webp"
+                target="_blank"
+                class="relative block h-72"
+              >
+                <span class="item-hover">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <img
+                  class="h-full w-full rounded-xl object-cover object-center"
+                  src="/src/img/image2-min.webp"
+                  width="18.625rem"
+                  height="18.625rem"
+                  loading="lazy"
+                  alt="Favorite works image 1"
+                />
+              </a>
+              <div class="item-info">
+                <h3 class="md-text font-semibold">Sunset</h3>
+                <div class="like-group group" tabindex="0">
+                  <svg
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    class="like-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  25
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="flex flex-col justify-between">
+              <a
+                href="/src/img/image3.webp"
+                target="_blank"
+                class="relative block h-72"
+              >
+                <span class="item-hover">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <img
+                  class="h-full w-full rounded-xl object-cover object-center"
+                  src="/src/img/image3-min.webp"
+                  width="18.625rem"
+                  height="18.625rem"
+                  loading="lazy"
+                  alt="Favorite works image 2"
+                />
+              </a>
+              <div class="item-info">
+                <h3 class="md-text font-semibold">
+                  Abstract painting on canvas
+                </h3>
+                <div class="like-group group" tabindex="0">
+                  <svg
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    class="like-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  19
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="flex flex-col justify-between">
+              <a
+                href="/src/img/image4.webp"
+                target="_blank"
+                class="relative block h-72"
+              >
+                <span class="item-hover">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <img
+                  class="h-full w-full rounded-xl object-cover object-center"
+                  src="/src/img/image4-min.webp"
+                  width="18.625rem"
+                  height="18.625rem"
+                  loading="lazy"
+                  alt="Favorite works image 3"
+                />
+              </a>
+              <div class="item-info">
+                <h3 class="md-text font-semibold">Abstraction</h3>
+                <div class="like-group group" tabindex="0">
+                  <svg
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    class="like-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  105
+                </div>
+              </div>
+            </article>
+
+            <!-- Item -->
+            <article class="flex flex-col justify-between">
+              <a
+                href="/src/img/image5.webp"
+                target="_blank"
+                class="relative block h-72"
+              >
+                <span class="item-hover">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <img
+                  class="h-full w-full rounded-xl object-cover object-center"
+                  src="/src/img/image5-min.webp"
+                  width="18.625rem"
+                  height="18.625rem"
+                  loading="lazy"
+                  alt="Favorite works image 4"
+                />
+              </a>
+              <div class="item-info">
+                <h3 class="md-text font-semibold">Black hole</h3>
+                <div class="like-group group" tabindex="0">
+                  <svg
+                    width="20"
+                    height="18"
+                    viewBox="0 0 20 18"
+                    fill="none"
+                    class="like-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  20
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Advantages -->
+      <section class="section relative">
+        <span
+          class="absolute bottom-0 top-0 m-auto h-14 w-full bg-gradient blur-[12.5rem] dark:blur-[9.375rem]"
+        ></span>
+        <div class="custom-container">
+          <h2 class="heading-2 text-center">Let's create history</h2>
+          <p class="md-text md:lg-text mt-8 text-center">
+            Save not only the moment, the place, but also the aroma and
+            sensations.
+          </p>
+          <div
+            class="mt-8 flex flex-wrap items-start justify-around gap-y-8 text-center md:mt-11 md:flex-nowrap md:gap-8"
+          >
+            <!-- Advantages item -->
+            <div class="advantages-block">
+              <div class="advantages-icon">
+                <svg
+                  width="56"
+                  height="60"
+                  class="fill-dark-gray-2 dark:fill-light-gray"
+                  viewBox="0 0 56 60"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M38.5708 24.387C39.2542 23.6566 39.2542 22.4726 38.5708 21.7422C37.8873 21.0119 36.7793 21.0119 36.0959 21.7422L25.6667 32.8872L21.0708 27.9759C20.3873 27.2456 19.2793 27.2456 18.5959 27.9759C17.9125 28.7062 17.9125 29.8903 18.5959 30.6206L24.4292 36.8543C25.1126 37.5846 26.2207 37.5846 26.9041 36.8543L38.5708 24.387Z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M29.2597 1.58742C28.4409 1.30363 27.5591 1.30362 26.7403 1.58742L7.49026 8.25913C5.80876 8.84191 4.66666 10.5138 4.66666 12.4073V24.9347C4.66667 40.3676 13.4652 51.627 26.6023 56.9242C27.5022 57.2871 28.4978 57.2871 29.3977 56.9242C42.5348 51.627 51.3333 40.3676 51.3333 24.9347V12.408C51.3333 10.5152 50.1918 8.84211 48.5097 8.25913L29.2597 1.58742ZM27.82 5.14518C27.937 5.10464 28.063 5.10464 28.1799 5.14518L47.43 11.8169C47.6719 11.9007 47.8333 12.1395 47.8333 12.408V24.9347C47.8333 38.5524 40.1782 48.5796 28.162 53.4248C28.0585 53.4666 27.9414 53.4666 27.8379 53.4248C15.8217 48.5796 8.16667 38.5524 8.16666 24.9347L8.16666 12.4073C8.16666 12.1394 8.32755 11.9009 8.57003 11.8169L27.82 5.14518Z"
+                  />
+                </svg>
+              </div>
+              <p>Get high-quality photos</p>
+            </div>
+
+            <!-- Advantages item -->
+            <div class="advantages-block">
+              <div class="advantages-icon">
+                <svg
+                  width="56"
+                  height="60"
+                  class="fill-dark-gray-2 dark:fill-light-gray"
+                  viewBox="0 0 56 60"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.41671 4.98694C4.16154 4.98694 2.33337 6.94058 2.33337 9.35051V18.0777C2.33337 20.4876 4.16154 22.4412 6.41671 22.4412H49.5834C51.8385 22.4412 53.6667 20.4876 53.6667 18.0777V9.35051C53.6667 6.94058 51.8385 4.98694 49.5834 4.98694H6.41671ZM49.5834 8.72714H6.41671C6.09454 8.72714 5.83337 9.00623 5.83337 9.35051V18.0777C5.83337 18.4219 6.09454 18.701 6.41671 18.701H49.5834C49.9055 18.701 50.1667 18.4219 50.1667 18.0777V9.35051C50.1667 9.00623 49.9055 8.72714 49.5834 8.72714Z"
+                  />
+                  <path
+                    d="M6.41671 24.9347C7.38321 24.9347 8.16671 25.772 8.16671 26.8048V50.4928C8.16671 50.837 8.42788 51.1161 8.75004 51.1161H47.25C47.5722 51.1161 47.8334 50.837 47.8334 50.4928V26.8048C47.8334 25.772 48.6169 24.9347 49.5834 24.9347C50.5499 24.9347 51.3334 25.772 51.3334 26.8048V50.4928C51.3334 52.9027 49.5052 54.8563 47.25 54.8563H8.75004C6.49488 54.8563 4.66671 52.9027 4.66671 50.4928V26.8048C4.66671 25.772 5.45021 24.9347 6.41671 24.9347Z"
+                  />
+                  <path
+                    d="M22.75 28.6749C21.7835 28.6749 21 29.5122 21 30.545C21 31.5778 21.7835 32.4151 22.75 32.4151H33.25C34.2165 32.4151 35 31.5778 35 30.545C35 29.5122 34.2165 28.6749 33.25 28.6749H22.75Z"
+                  />
+                </svg>
+              </div>
+              <p>All sources will be archived</p>
+            </div>
+
+            <!-- Advantages item -->
+            <div class="advantages-block">
+              <div class="advantages-icon">
+                <svg
+                  width="56"
+                  height="60"
+                  class="fill-dark-gray-2 dark:fill-light-gray"
+                  viewBox="0 0 56 60"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.24996 9.97388C4.92779 9.97388 4.66663 10.253 4.66663 10.5972V49.246C4.66663 49.5903 4.92779 49.8694 5.24996 49.8694H12.6654L32.6657 27.3715C34.2472 25.5925 36.8899 25.5563 38.5135 27.2914L51.3333 40.991V10.5972C51.3333 10.253 51.0721 9.97388 50.75 9.97388H5.24996ZM13.4072 53.6096H13.4255H50.75C53.0051 53.6096 54.8333 51.656 54.8333 49.246V45.5106V45.501V10.5972C54.8333 8.18731 53.0051 6.23367 50.75 6.23367H5.24996C2.9948 6.23367 1.16663 8.18731 1.16663 10.5972V49.246C1.16663 51.656 2.9948 53.6096 5.24996 53.6096H13.4072ZM51.3333 49.246V46.2805L36.0386 29.9361C35.8067 29.6883 35.4291 29.6934 35.2032 29.9476L17.4929 49.8694H50.75C51.0721 49.8694 51.3333 49.5903 51.3333 49.246ZM21 23.0646C21 25.4745 19.1718 27.4282 16.9166 27.4282C14.6615 27.4282 12.8333 25.4745 12.8333 23.0646C12.8333 20.6547 14.6615 18.701 16.9166 18.701C19.1718 18.701 21 20.6547 21 23.0646ZM24.5 23.0646C24.5 27.5402 21.1048 31.1684 16.9166 31.1684C12.7285 31.1684 9.33329 27.5402 9.33329 23.0646C9.33329 18.589 12.7285 14.9608 16.9166 14.9608C21.1048 14.9608 24.5 18.589 24.5 23.0646Z"
+                  />
+                </svg>
+              </div>
+              <p>Minimum 30 edited photos</p>
+            </div>
+
+            <!-- Advantages item -->
+            <div class="advantages-block">
+              <div class="advantages-icon">
+                <svg
+                  width="56"
+                  height="60"
+                  class="fill-dark-gray-2 dark:fill-light-gray"
+                  viewBox="0 0 56 60"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M47.4169 1.87012C41.0223 1.87012 34.8692 4.47995 30.2152 9.16619L27.1713 12.2311C25.914 13.4971 24.7138 14.8242 23.5743 16.2079H11.8211C10.3868 16.2079 9.05764 17.0121 8.31968 18.3264L1.99939 29.5832C1.7082 30.1018 1.6697 30.7389 1.89605 31.2932C2.1224 31.8476 2.58565 32.2507 3.13948 32.3753L13.8068 34.7752C13.897 34.898 13.9969 35.0148 14.1062 35.1245L18.7635 39.7951L23.1314 44.769C23.2341 44.886 23.3435 44.9927 23.4585 45.0892L25.7042 56.4886C25.8208 57.0805 26.1981 57.5755 26.7168 57.8174C27.2355 58.0593 27.8317 58.0182 28.317 57.707L38.8509 50.9529C40.0808 50.1643 40.8333 48.744 40.8333 47.2112V34.6505C42.1287 33.4321 43.3711 32.1488 44.5562 30.8044L47.4217 27.5539C51.8076 22.5787 54.2492 16.001 54.2474 9.16591L54.2466 6.23241C54.2459 3.82297 52.4179 1.87012 50.1632 1.87012H47.4169ZM37.3333 37.6818C36.5571 38.3 35.7655 38.8966 34.9591 39.4711L27.0398 45.1129L28.623 53.149L37.0501 47.7457C37.2258 47.6331 37.3333 47.4302 37.3333 47.2112V37.6818ZM13.7844 30.948L19.0656 22.4825C19.6026 21.6217 20.1603 20.7767 20.738 19.9481H11.8211C11.6162 19.9481 11.4263 20.063 11.3209 20.2507L6.26464 29.2562L13.7844 30.948ZM32.6154 11.8883C36.62 7.85599 41.9146 5.61032 47.4169 5.61032H50.1632C50.4853 5.61032 50.7465 5.8893 50.7466 6.23351L50.7474 9.16701C50.749 15.0484 48.648 20.7083 44.8741 24.9892L42.0086 28.2398C39.3094 31.3017 36.293 34.0256 33.0176 36.359L25.3456 41.8247L21.2777 37.1924C21.2523 37.1635 21.2261 37.1355 21.1991 37.1084L16.8615 32.7584L21.9778 24.5572C24.1603 21.0587 26.7079 17.8367 29.5715 14.9533L32.6154 11.8883ZM40.8333 19.9478C40.8333 22.0134 39.2663 23.688 37.3333 23.688C35.4003 23.688 33.8333 22.0134 33.8333 19.9478C33.8333 17.8821 35.4003 16.2076 37.3333 16.2076C39.2663 16.2076 40.8333 17.8821 40.8333 19.9478ZM15.1666 52.3629C17.2662 50.1192 17.2663 45.8796 15.1667 43.6359C13.0671 41.3921 9.09958 41.3921 6.99995 43.6358C4.17943 46.6499 3.62831 53.3634 3.52372 55.4629C3.5062 55.8145 3.77002 56.0964 4.09907 56.0777C6.0638 55.9658 12.3466 55.3765 15.1666 52.3629Z"
+                  />
+                </svg>
+              </div>
+              <p>Quickly and efficiently</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section class="section" id="portfolio">
+        <div class="custom-container relative">
+          <span
+            class="absolute -right-14 -top-14 h-32 w-32 bg-pink blur-[9.375rem]"
+          ></span>
+          <span
+            class="absolute -bottom-14 -left-14 h-32 w-32 bg-blue blur-[9.375rem]"
+          ></span>
+          <div
+            class="relative flex flex-col items-center justify-between gap-8 md:flex-row"
+          >
+            <h2 class="heading-2">Portfolio</h2>
+            <div
+              role="tablist"
+              class="flex flex-wrap justify-center gap-x-8 gap-y-3"
+            >
+              <!-- Tab -->
+              <label
+                for="tab1"
+                class="md-text md:lg-text cursor-pointer font-medium hover:text-accent focus:text-accent"
+                ><span
+                  tabindex="0"
+                  class="active-tab"
+                  aria-controls="panel1"
+                  role="tab"
+                  id="tabpanel1"
+                  >All</span
+                ></label
+              >
+
+              <!-- Tab -->
+              <label
+                for="tab2"
+                class="md-text md:lg-text cursor-pointer font-medium hover:text-accent focus:text-accent"
+                ><span
+                  tabindex="0"
+                  aria-controls="panel2"
+                  role="tab"
+                  id="tabpanel2"
+                  >Abstraction</span
+                ></label
+              >
+
+              <!-- Tab -->
+              <label
+                for="tab3"
+                class="md-text md:lg-text cursor-pointer font-medium hover:text-accent focus:text-accent"
+                ><span
+                  tabindex="0"
+                  aria-controls="panel3"
+                  role="tab"
+                  id="tabpanel3"
+                  >Nature</span
+                ></label
+              >
+            </div>
+          </div>
+
+          <!-- Tab content -->
+          <div class="relative">
+            <input
+              class="peer hidden"
+              type="radio"
+              id="tab1"
+              name="tabs"
+              checked
+            />
+            <div
+              class="mt-8 hidden grid-cols-1 gap-8 peer-checked:grid sm:grid-cols-2 lg:grid-cols-4"
+              role="tabpanel"
+              aria-labelledby="tabpanel1"
+              id="panel1"
+            >
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image6.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image6-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 5"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Sunset</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    25
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image7.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image7-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 6"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">
+                    Abstract painting on canvas
+                  </h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    19
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image8.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image8-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 7"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Abstraction</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    105
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image9.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image9-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 8"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Black hole</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    20
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image10.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image10-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 9"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Sunset</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    25
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image11.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image11-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 10"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Abstraction</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    19
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image12.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image12-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 11"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">
+                    Abstract painting on canvas
+                  </h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    105
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image13.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image13-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 12"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Black hole</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    20
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Tab content -->
+          <div class="relative">
+            <input class="peer hidden" type="radio" id="tab2" name="tabs" />
+            <div
+              class="mt-8 hidden grid-cols-1 gap-8 peer-checked:grid sm:grid-cols-2 lg:grid-cols-4"
+              role="tabpanel"
+              aria-labelledby="tabpanel2"
+              id="panel2"
+            >
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image6.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image6-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 5"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Sunset</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    25
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image7.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image7-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 6"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">
+                    Abstract painting on canvas
+                  </h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    19
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image8.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image8-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 7"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Abstraction</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    105
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image9.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image9-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 8"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Black hole</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    20
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Tab content -->
+          <div class="relative">
+            <input class="peer hidden" type="radio" id="tab3" name="tabs" />
+            <div
+              class="mt-8 hidden grid-cols-1 gap-8 peer-checked:grid sm:grid-cols-2 lg:grid-cols-4"
+              role="tabpanel"
+              aria-labelledby="tabpanel3"
+              id="panel3"
+            >
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image10.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image10-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 9"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Sunset</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    25
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image11.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image11-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 10"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Abstraction</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    19
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image12.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image12-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 11"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">
+                    Abstract painting on canvas
+                  </h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    105
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item -->
+              <article class="flex flex-col justify-between">
+                <a
+                  href="/src/img/image13.webp"
+                  target="_blank"
+                  class="relative block h-72"
+                >
+                  <span class="item-hover">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M39.2128 39.2128L28.1804 28.1804M28.1804 28.1804C31.1663 25.1944 32.8438 21.1446 32.8438 16.9219C32.8438 12.6991 31.1663 8.64935 28.1804 5.66341C25.1944 2.67748 21.1446 1 16.9219 1C12.6991 1 8.64935 2.67748 5.66341 5.66341C2.67748 8.64935 1 12.6991 1 16.9219C1 21.1446 2.67748 25.1944 5.66341 28.1804C8.64935 31.1663 12.6991 32.8438 16.9219 32.8438C21.1446 32.8438 25.1944 31.1663 28.1804 28.1804Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <img
+                    class="h-full w-full rounded-xl object-cover object-center"
+                    src="/src/img/image13-min.webp"
+                    width="18.625rem"
+                    height="18.625rem"
+                    loading="lazy"
+                    alt="Favorite works image 12"
+                  />
+                </a>
+                <div class="item-info">
+                  <h3 class="md-text font-semibold">Black hole</h3>
+                  <div class="like-group group" tabindex="0">
+                    <svg
+                      width="20"
+                      height="18"
+                      viewBox="0 0 20 18"
+                      fill="none"
+                      class="like-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.1238 5.25C19.1238 2.765 17.0104 0.75 14.4036 0.75C12.4553 0.75 10.7818 1.876 10.0619 3.483C9.342 1.876 7.66857 0.75 5.71925 0.75C3.11445 0.75 1 2.765 1 5.25C1 12.47 10.0619 17.25 10.0619 17.25C10.0619 17.25 19.1238 12.47 19.1238 5.25Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    20
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <button type="button" class="button-transparent">Load more</button>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section relative">
+        <span
+          class="absolute bottom-0 top-0 m-auto h-14 w-full bg-gradient blur-[12.5rem] dark:blur-[9.375rem]"
+        ></span>
+        <div class="custom-container">
+          <h2 class="heading-2 text-center md:text-left">FAQ</h2>
+          <!-- FAQ item -->
+          <label
+            tabindex="0"
+            class="md:lg-text mt-8 block cursor-pointer text-xl"
+          >
+            <input type="checkbox" class="peer hidden" />
+            <p class="arrow relative pl-11 dark:text-white">
+              This is our first time at a photo shoot. Can you tell me how to
+              pose, where to look?
+            </p>
+            <span
+              class="md-text md:lg-text hidden pt-3 peer-checked:block md:pt-8"
+            >
+              <p>
+                Yes, of course, I always help with posing and suggest how best
+                to stand and where to look. I also always have a casual
+                conversation during the shoot so that you don’t feel constrained
+                - because this will be reflected in the photographs.
+              </p>
+            </span>
+          </label>
+
+          <!-- FAQ item -->
+          <label
+            tabindex="0"
+            class="md:lg-text mt-8 block cursor-pointer text-xl md:mt-11"
+          >
+            <input type="checkbox" class="peer hidden" />
+            <p class="arrow relative pl-11 dark:text-white">
+              How long in advance do I need to sign up for a shoot?
+            </p>
+            <span
+              class="md-text md:lg-text hidden pt-3 peer-checked:block md:pt-8"
+            >
+              <p>
+                The earlier you sign up, the more likely it is that the time you
+                need will be available. Sometimes people sign up even for today,
+                but the optimal period is two weeks in advance.
+              </p>
+            </span>
+          </label>
+
+          <!-- FAQ item -->
+          <label
+            tabindex="0"
+            class="md:lg-text md:mt-11- mt-8 block cursor-pointer text-xl"
+          >
+            <input type="checkbox" class="peer hidden" />
+            <p class="arrow relative pl-11 dark:text-white">
+              Do you print photos?
+            </p>
+            <span
+              class="md-text md:lg-text hidden pt-3 peer-checked:block md:pt-8"
+            >
+              <p>
+                Yes, but photo printing is not included in the cost of photo
+                sessions and is paid separately:
+              </p>
+              <ul class="ml-5 list-disc md:ml-6">
+                <li>10x15 centimeters (glossy paper)</li>
+                <li>A4 (21x29.7 centimeters, glossy paper)</li>
+              </ul>
+              <p>
+                Photo printing services are provided only in conjunction with
+                photography services!
+              </p>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Contact me -->
+      <section class="section" id="contact">
+        <div class="custom-container">
+          <h2 class="heading-2 text-center md:text-left">Contact me</h2>
+          <form class="mt-8 grid gap-8 md:mt-11 md:grid-cols-3">
+            <div class="group relative">
+              <input id="username" class="input peer" type="text" required />
+              <label for="username" class="label">Name</label>
+            </div>
+            <div class="group relative">
+              <input id="phone" class="input peer" type="text" required />
+              <label for="phone" class="label">Phone</label>
+            </div>
+            <button class="button mt-0 flex h-11 rounded-[0.625rem]">
+              <span class="relative text-base">Contact</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-11 lg:mt-36">
+        <div class="custom-container">
+          <div class="flex flex-col justify-between gap-8 pb-8 md:flex-row">
+            <p
+              class="lg-text lg:xl-text text-center md:max-w-sm md:text-left lg:max-w-lg"
+            >
+              For me, photography is not just beautiful shots, it is an
+              opportunity to show your beauty and individuality.
+            </p>
+            <nav class="flex justify-center gap-8 md:justify-start lg:gap-36">
+              <ul class="space-y-3 text-center md:space-y-8 md:text-left">
+                <li>
+                  <a
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
+                    href="#home"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
+                    href="#favorite"
+                    >Favorite works</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
+                    href="#portfolio"
+                    >Portfolio</a
+                  >
+                </li>
+              </ul>
+              <ul class="space-y-3 text-center md:space-y-8 md:text-left">
+                <li>
+                  <a
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    >Facebook</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    >Instagram</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    >YouTube</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="md-text lg:lg-text transition hover:text-accent focus:text-accent"
+                    href="mailto:example@gmail.com"
+                    target="_blank"
+                    >Email</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div
+            class="flex flex-col items-center justify-between gap-3 border-t border-dark-gray-2 py-8 dark:border-light-gray md:flex-row md:gap-8"
+          >
+            <div class="flex items-center gap-8">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <svg
+                  viewBox="0 0 16 32"
+                  width="16"
+                  height="32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-dark-gray-2 transition hover:fill-accent dark:fill-light-gray hover:dark:fill-accent"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.9141 32V17.6H15.2859L16 11.2H10.9141V8.08281C10.9141 6.43481 10.9562 4.8 13.259 4.8H15.5915V0.224219C15.5915 0.155419 13.588 0 11.5611 0C7.32799 0 4.67744 2.65151 4.67744 7.52031V11.2H0V17.6H4.67744V32H10.9141Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-dark-gray-2 transition hover:fill-accent dark:fill-light-gray hover:dark:fill-accent"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M16.5 24C21.1944 24 25 20.1944 25 15.5C25 10.8056 21.1944 7 16.5 7C11.8056 7 8 10.8056 8 15.5C8 20.1944 11.8056 24 16.5 24ZM16.5 21.1667C19.6296 21.1667 22.1667 18.6296 22.1667 15.5C22.1667 12.3704 19.6296 9.83333 16.5 9.83333C13.3704 9.83333 10.8333 12.3704 10.8333 15.5C10.8333 18.6296 13.3704 21.1667 16.5 21.1667Z"
+                  />
+                  <path
+                    d="M24.5 6C23.6716 6 23 6.67158 23 7.5C23 8.32842 23.6716 9 24.5 9C25.3284 9 26 8.32842 26 7.5C26 6.67158 25.3284 6 24.5 6Z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.951215 4.76518C0 6.63204 0 9.07591 0 13.9636V18.0364C0 22.9241 0 25.368 0.951215 27.2348C1.78793 28.8769 3.12303 30.2121 4.76518 31.0487C6.63204 32 9.07591 32 13.9636 32H18.0364C22.9241 32 25.368 32 27.2348 31.0487C28.8769 30.2121 30.2121 28.8769 31.0487 27.2348C32 25.368 32 22.9241 32 18.0364V13.9636C32 9.07591 32 6.63204 31.0487 4.76518C30.2121 3.12303 28.8769 1.78793 27.2348 0.951215C25.368 0 22.9241 0 18.0364 0H13.9636C9.07591 0 6.63204 0 4.76518 0.951215C3.12303 1.78793 1.78793 3.12303 0.951215 4.76518ZM18.0364 2.90909H13.9636C11.4718 2.90909 9.77782 2.91136 8.46848 3.01833C7.19308 3.12253 6.54086 3.3114 6.08588 3.54323C4.99111 4.10105 4.10105 4.99111 3.54323 6.08588C3.3114 6.54086 3.12253 7.19308 3.01833 8.46848C2.91136 9.77782 2.90909 11.4718 2.90909 13.9636V18.0364C2.90909 20.5283 2.91136 22.2221 3.01833 23.5315C3.12253 24.807 3.3114 25.4592 3.54323 25.9142C4.10105 27.0089 4.99111 27.8989 6.08588 28.4567C6.54086 28.6886 7.19308 28.8775 8.46848 28.9817C9.77782 29.0886 11.4718 29.0909 13.9636 29.0909H18.0364C20.5283 29.0909 22.2221 29.0886 23.5315 28.9817C24.807 28.8775 25.4592 28.6886 25.9142 28.4567C27.0089 27.8989 27.8989 27.0089 28.4567 25.9142C28.6886 25.4592 28.8775 24.807 28.9817 23.5315C29.0886 22.2221 29.0909 20.5283 29.0909 18.0364V13.9636C29.0909 11.4718 29.0886 9.77782 28.9817 8.46848C28.8775 7.19308 28.6886 6.54086 28.4567 6.08588C27.8989 4.99111 27.0089 4.10105 25.9142 3.54323C25.4592 3.3114 24.807 3.12253 23.5315 3.01833C22.2221 2.91136 20.5283 2.90909 18.0364 2.90909Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                aria-label="Youtube"
+              >
+                <svg
+                  width="43"
+                  height="32"
+                  viewBox="0 0 43 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-dark-gray-2 transition hover:fill-accent dark:fill-light-gray hover:dark:fill-accent"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6598 7.23717C17.1096 6.91882 16.4336 6.9211 15.8855 7.24316C15.3374 7.56522 15 8.15835 15 8.8V23.2C15 23.8417 15.3374 24.4348 15.8855 24.7569C16.4336 25.0789 17.1096 25.0812 17.6598 24.7628L30.1042 17.5628C30.6581 17.2424 31 16.646 31 16C31 15.354 30.6581 14.7577 30.1042 14.4373L17.6598 7.23717ZM25.6389 16L18.5556 20.0983V11.9017L25.6389 16Z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 16C0 9.33381 0 6.00071 1.71089 3.66412C2.26343 2.90951 2.93224 2.24588 3.69275 1.69762C6.04759 1.05964e-07 9.40673 0 16.125 0H26.875C33.5932 0 36.9524 1.05964e-07 39.3072 1.69762C40.0678 2.24588 40.7366 2.90951 41.2891 3.66412C43 6.00071 43 9.33381 43 16C43 22.6661 43 25.9993 41.2891 28.3358C40.7366 29.0905 40.0678 29.7541 39.3072 30.3024C36.9524 32 33.5932 32 26.875 32H16.125C9.40673 32 6.04759 32 3.69275 30.3024C2.93224 29.7541 2.26343 29.0905 1.71089 28.3358C0 25.9993 0 22.6661 0 16ZM16.125 3.55556H26.875C30.3139 3.55556 32.6053 3.56044 34.3414 3.74708C36.0105 3.92651 36.7363 4.23908 37.2011 4.57413C37.6572 4.90309 38.0586 5.30126 38.3902 5.75403C38.7278 6.2152 39.0427 6.93534 39.2237 8.59145C39.4118 10.3141 39.4167 12.5877 39.4167 16C39.4167 19.4123 39.4118 21.6859 39.2237 23.4085C39.0427 25.0647 38.7278 25.7849 38.3902 26.246C38.0586 26.6987 37.6572 27.0969 37.2011 27.426C36.7363 27.7609 36.0105 28.0734 34.3414 28.253C32.6053 28.4396 30.3139 28.4444 26.875 28.4444H16.125C12.686 28.4444 10.3947 28.4396 8.65857 28.253C6.98952 28.0734 6.26376 27.7609 5.79898 27.426C5.34268 27.0969 4.9414 26.6987 4.60987 26.246C4.27219 25.7849 3.95718 25.0647 3.77635 23.4085C3.58826 21.6859 3.58333 19.4123 3.58333 16C3.58333 12.5877 3.58826 10.3141 3.77635 8.59145C3.95718 6.93534 4.27219 6.2152 4.60987 5.75403C4.9414 5.30126 5.34268 4.90309 5.79898 4.57413C6.26376 4.23908 6.98952 3.92651 8.65857 3.74708C10.3947 3.56044 12.686 3.55556 16.125 3.55556Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="md-text md:lg-text">Copyright 2023 Laura</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/src/js/script.min.js"></script>
+  </body>
+</html>
